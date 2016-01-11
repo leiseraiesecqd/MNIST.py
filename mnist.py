@@ -6,6 +6,11 @@ from array import array
 
 
 def load_mnist(dataset='train', path='.'):
+    """
+    loosely based on
+    https://github.com/amitgroup/amitgroup/blob/master/amitgroup/io/mnist.py
+    https://gist.github.com/akesling/5358964
+    """
     if dataset == "train":
         fname_img = os.path.join(path, 'train-images-idx3-ubyte.gz')
         fname_lbl = os.path.join(path, 'train-labels-idx1-ubyte.gz')
